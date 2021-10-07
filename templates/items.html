@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Товары</title>
+</head>
+<body>
+<h1>Список товаров!</h1>
+<ol>
+    {% for item in products %}
+<!--    <li><a href="/item/{{item.id}}">{{item.name}}</a></li>-->
+    <li><a href="{% url 'item-page' item.id %}">{{item.name}}</a></li>
+    {% endfor %}
+</ol>
+</body>
+</html>

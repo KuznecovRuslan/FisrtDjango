@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{{item.name}}</title>
+</head>
+<body>
+    <h1>Товар из каталога</h1>
+    <div>id товара: {{item.id}}</div>
+    <div>Название товара: {{item.name}}</div>
+<!--    <div>Кол-во товара:-->
+<!--        {% if quantity %}-->
+<!--        {{quantity}}-->
+<!--        {% else %}-->
+<!--        товар отсутствует-->
+<!--        {% endif%}-->
+<!--    </div>-->
+    <div>Кол-во товара: {{item.count|default:"товара нэма"}}</div>
+    <div><a href="{% url 'items-list' %}">Назад</a></div>
+</body>
+</html>
