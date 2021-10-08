@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Home</title>
+
+    {%block styles%}
+    <link rel="stylesheet" href="{% static 'styles/style.css' %}">
+    {%endblock%}
+</head>
+<body>
+
+{% include 'inc/header.html' %}
+
+{%block mainContent %}
+{%endblock%}
+
+{% include 'inc/footer.html' %}
+
+</body>
+</html>
